@@ -1,0 +1,38 @@
+[package]
+name = "ufsg"
+version = "0.1.0"
+edition = "2021"
+build = "build/main.rs"
+
+[dependencies]
+bevy = { version = "0.12.0", features = ["file_watcher"] }
+bevy_egui = "0.23.0"
+futures-lite = "2.0.1"
+fxhash = "0.2.1"
+noise = { version = "0.8.2" }
+puffin_egui = "0.23.0"
+rand = "0.8.5"
+rand_xorshift = "0.3.0"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+# rayon = "1.8.0"
+
+[build-dependencies]
+anyhow = "1.0.75"
+heck = "0.4.1"
+quote = "1.0.33"
+serde = { version = "1.0.192", features = ["derive"] }
+tiled = "0.11.2"
+prettyplease = "0.2.15"
+syn = "2.0.39"
+
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[dev-dependencies]
+image = "0.24.7"

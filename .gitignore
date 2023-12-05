@@ -1,0 +1,9 @@
+.DS_Store
+.helix/
+/_
+/target
+
+# If you want this project to run properly hit me up with proof you bought: https://v3x3d.itch.io/mini-medieval
+# and I'll give you the tile set I extracted from that asset pack.
+*.png
+*.aseprite
